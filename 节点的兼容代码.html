@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<ul id="uu">
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+</ul>
+<script src="common.js"></script>
+<script>
+    //获取任意一个父级元素的第一个子级元素
+    function getFirstElementChild(element){
+        if(element.firstElementChild){
+            return element.firstElementChild;
+        }else{
+            var node=element.firstChild;
+            while(node&&node.nodeType!==1){
+                node=node.nextSibling;
+            }
+            return node;
+        }
+    }
+
+    //获取任意一个父级元素的最后一个子级元素
+    function getLastElementChild(element){
+        if(element.lastElementChild){
+            return element.lastElementChild;
+        }else{
+            var node=element.lastChild;
+            while(node&&node.nodeType!==1){
+                node=node.previousSibling;
+            }
+            return node;
+        }
+    }
+
+    console.log(getFirstElementChild(my$("uu")).innertext);
+    console.log(getLastElementChild(my$("uu")).innertext);
+</script>
+</body>
+</html>

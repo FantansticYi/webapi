@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="修改文本框的值" id="btn" /><br/>
+<input type="text" value="" /><br/>
+<input type="text" value="" /><br/>
+<input type="text" value="" /><br/>
+<input type="text" value="" /><br/>
+<input type="text" value="" /><br/>
+<script>
+    document.getElementById("btn").onclick=function () {
+        var inputs=document.getElementsByTagName("input");
+        for(var i=0;i<inputs.length;i++){
+            //判断这个元素是不是按钮
+            if(inputs[i].type!=="button"){
+                inputs[i].value="123";
+            }
+        }
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn" />
+<div id="dv1">
+<p>haha,rilegoule</p>
+<p>haha,rilegoule</p>
+<p>haha,rilegoule</p>
+<p>haha,rilegoule</p>
+<p>haha,rilegoule</p>
+</div>
+<div id="dv2">
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+</div>
+<script>
+    //document.getElementsByTagName("标签的名字")；返回的是一个伪数组，
+    //无论获取的是一个标签，还是多个标签，最终都是在数组中存储的，这行代码的返回值就是一个数组。
+    document.getElementById("btn").onclick=function(){
+        //根据标签名字获取标签
+        var pObjs=document.getElementById("dv1").getElementsByTagName("p");
+        //循环遍历这个数组
+        for(var i=0;i<pObjs.length;i++){
+            //每个P标签设置文字
+            pObjs[i].innerText="我们都是P";
+        }
+    };
+</script>
+</body>
+</html>

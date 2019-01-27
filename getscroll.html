@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style></style>
+</head>
+<body>
+<div class="top" id="topPart"></div>
+<div class="nav" id="navBar"></div>
+<div class="main" id="mainPart"></div>
+<script src="common.js"></script>
+<script>
+    //获取浏览器向上卷曲出去的距离的值，向左卷曲出去的值
+    // function getScroll(){
+    //     var obj={};
+    //     //向上卷曲出去的距离
+    //     var top1=window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0;
+    //     var left=window.pageXOffset||document.documentElement.scrollLeft||document.body.scrollLeft;
+    //     obj.left=left;
+    //     obj.top=top1;
+    //     return obj;
+    // }
+    // function getScroll(){
+    //     var obj={};
+    //     //向上卷曲出去的距离
+    //     obj.left=window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0;
+    //     obj.top=window.pageXOffset||document.documentElement.scrollLeft||document.body.scrollLeft;
+    //     return obj;
+    // }
+
+
+    // function getScroll(){
+    //     var obj={
+    //         left:window.pageXOffset||document.documentElement.scrollLeft||document.body.scrollLeft,
+    //         top:window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0
+    //     };
+    //     return obj;
+    // }
+
+    function getScroll(){
+        return{
+            left:window.pageXOffset||document.documentElement.scrollLeft||document.body.scrollLeft,
+            top:window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0
+        };
+    }
+
+    //测试
+    window.onscroll=function(){
+      console.log(getScroll());
+    };
+</script>
+</body>
+</html>

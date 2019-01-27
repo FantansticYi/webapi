@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="xiugai" id="btn"/>
+<img src="images/2.jpg" alt="haha" title="ss">
+<script>
+    document.getElementById("btn").onclick=function(){
+        //返回的是一个伪数组
+        var imgObjs=document.getElementsByTagName("img");
+        imgObjs[0].alt="dd";
+        imgObjs[0].title="hahss";
+    };
+</script>
+</body>
+</html>
